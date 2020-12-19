@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="styles_crr.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IKAE</title>
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./images/logo.png" alt="logo">
+            <h1>FRESH<br>FURNITURE</h1>
+            <img class="img_header" src="./images/header.jpg" alt="img_principal">
+            <nav class="nav_desk">
+                <button class="button_nav">SHOP</button>
+                <button class="button_nav">COLLECTION</button>
+                <button class="button_nav">BLOG</button>
+                <button class="button_nav">CONTACT</button>
+                <button class="button_nav"><img src="./images/search.png" class="lupa"></button>
+            </nav>
+            <nav class="nav_mobile">
+                <button onclick="cambiarClase()" class="button_nav_mobile">
+                    <img src="./images/menu.svg" id="abrirMenu" style="display:block; visibility:visible;" onclick="cMenu()">
+                    <img src="./images/borrar.svg" id="cerrarMenu" style="display:none; visibility:hidden;" onclick="aMenu()">
+                </button>
+                <div class="sinDesplegar" id="desplegable">
+                    <button class="subButton">SHOP</button>
+                    <button class="subButton">COLLECTION</button>
+                    <button class="subButton">BLOG</button>
+                    <button class="subButton">CONTACT</button>
+                    <button class="subButton">SEARCH</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h2>about us</h2>
+            <div class="info">
+                <h3>we provide good<br>furniture</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nec integer, euismod dignissim fringilla curae in duis dui elementum hac magnis, viverra convallis proin aliquet auctor nunc tellus primis. Condimentum quis venenatis penatibus commodo sapien tempus, sollicitudin luctus phasellus laoreet ante diam nostra, fusce molestie aptent cubilia ultrices. Pretium aenean dictum vehicula hendrerit a volutpat posuere, pharetra potenti iaculis donec et.</p>
+            </div>
+            <div class="servicios">
+                <h3>our<br>specialization</h3>
+                <div class="block_ico">
+                    <div>
+                        <img class="ico_serv_1" src="./images/delivery.png" alt="transporte">
+                        <p>DELIVERY</p>
+                    </div>
+                    <div>
+                        <img class="ico_serv" src="./images/support.png" alt="soporte">
+                        <p>SUPPORT</p>
+                    </div>
+                    <div>
+                        <img class="ico_serv" src="./images/montage.png" alt="montaje">
+                        <p>MONTAGE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main_imagen">
+                <img src="./images/image.jpg">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_01">
+                <h2>categories</h2>
+            </div>
+
+            <div class="footer_02">
+                <div class="contenedor_img">
+                    <img id="bath" src="./images/bathroom.jpg" alt="baño">
+                    <h4>BATHROOM</h4>
+                </div>
+                <div class="contenedor_img">
+                    <img src="./images/kitchen.jpg" alt="cocina">
+                    <h4>KITCHEN</h4>
+                </div>
+                <div class="contenedor_img">
+                    <img src="./images/bedroom.jpg" alt="dormitorio">
+                    <h4>BEDROOM</h4>
+                </div>
+                <div class="contenedor_img">
+                    <img id="sala" src="./images/livingroom.jpg" alt="sala">
+                    <h4>LIVING<br>ROOM</h4>
+                </div>
+            </div>
+            <p class="MR">© IKAE 2018 | All rights reserved.</p>
+
+        </footer>
+
+        
+        <script>
+            function cambiarClase(){
+                let desplegable = document.getElementById('desplegable');
+                desplegable.classList.toggle('sinDesplegar');
+            };
+
+            function aMenu(){
+                document.getElementById("abrirMenu").style.visibility="visible";
+                document.getElementById("abrirMenu").style.display="block";
+                document.getElementById('cerrarMenu').style.visibility="hidden";
+                document.getElementById('cerrarMenu').style.display="none";
+            };
+
+            function cMenu(){
+                document.getElementById("cerrarMenu").style.visibility="visible";
+                document.getElementById("cerrarMenu").style.display="block";
+                document.getElementById("abrirMenu").style.visibility="hidden";
+                document.getElementById('abrirMenu').style.display="none";   
+            };
+            
+         
+        </script>
+
+
+    </body>
+</html>
